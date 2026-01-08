@@ -1,0 +1,21 @@
+{
+  "name": "Metronome",
+  "description": "LLM-controllable metronome with adjustable BPM, time signature, and volume control",
+  "version": "1.0.0",
+  "author": "Metronome Extension",
+  "homepage": "",
+  "type": "third-party",
+  "manifest_version": 3,
+  "display": {
+    "show_in": ["extensions"],
+    "always_visible": true,
+    "tab_name": "Metronome"
+  },
+  "settings": {
+    "bpm": 120,
+    "timeSignature": "4/4",
+    "volume": 50
+  },
+  "css": ["style.css"],
+  "js": ["script.js"]
+}
