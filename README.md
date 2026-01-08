@@ -1,17 +1,17 @@
 # SillyTavern Metronome Extension
 
-A fully functional metronome extension for SillyTavern that allows the LLM to control tempo and timing through chat commands, with user-accessible controls and visual feedback.
+A fully functional metronome extension for SillyTavern that allows the LLM to control tempo and timing through chat commands, with user-accessible controls and visual feedback. FULL DISCLAIMER: GLM 4.7 made the entire thing, it works more or less, doesn't work with streaming turned on, likely can be fixed. I needed a proof of concept for a biofeedback system, this is what I came up with. Installation is hit or miss I had to manually drop the files into my user extension folder and restart the server. 
 
 ## Features
 
-- 🎵 **LLM-Controlled**: The LLM can start, stop, and adjust the metronome using simple chat commands
-- 🎚️ **BPM Control**: Adjustable tempo from 20-240 BPM with slider and number input
-- 🎼 **Time Signatures**: Support for 1/1, 2/4, 3/4, 4/4, and 6/8 time signatures
-- 🔊 **Volume Control**: Adjustable volume (0-100%) with real-time updates
-- 👆 **Tap Tempo**: Set BPM by tapping rhythm
-- 👁️ **Visual Beat Indicator**: Real-time visual feedback showing current beat position
-- 💾 **Settings Persistence**: Automatically saves your preferences
-- 🎨 **Modern UI**: Clean, responsive interface with smooth animations
+-  **LLM-Controlled**: The LLM can start, stop, and adjust the metronome using simple chat commands
+-  **BPM Control**: Adjustable tempo from 20-240 BPM with slider and number input
+-  **Time Signatures**: Support for 1/1, 2/4, 3/4, 4/4, and 6/8 time signatures
+-  **Volume Control**: Adjustable volume (0-100%) with real-time updates
+-  **Tap Tempo**: Set BPM by tapping rhythm
+-  **Visual Beat Indicator**: Real-time visual feedback showing current beat position
+-  **Settings Persistence**: Automatically saves your preferences
+-  **Modern UI**: Clean, responsive interface with smooth animations
 
 ## Installation
 
@@ -130,6 +130,14 @@ LLM: Now let's try a waltz rhythm. [METRONOME: TIME 3]
 LLM: I'll set up a practice session. [METRONOME: START] [METRONOME: BPM 90] [METRONOME: TIME 4] [METRONOME: VOLUME 60]
 ```
 
+**Example 5: System Prompt**
+```
+You have access to a controllable Metronome. You can control it by typing special commands in your messages.
+
+To start the metronome, type: [METRONOME: START] To stop the metronome, type: [METRONOME: STOP] To change the speed (BPM), type: [METRONOME: BPM 120] (Replace 120 with any speed between 40 and 250). To change the time signature, type: [METRONOME: TIME 4] (Replace 4 with the desired number of beats per bar).
+
+Example: I tap my foot to the rhythm. [METRONOME: BPM 90] [METRONOME: START] Let's play at this pace.
+```
 ## Visual Feedback
 
 ### Beat Indicator
@@ -252,5 +260,6 @@ For issues or suggestions:
 - Settings persistence
 
 ## Credits
+
 
 Created for SillyTavern users who want precise tempo control during roleplay sessions.
